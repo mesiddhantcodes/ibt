@@ -1,52 +1,93 @@
+"use client";
+import { motion } from "framer-motion";
+import Image from "next/image";
+
 export default function Testimonials() {
     const testimonials = [
         {
             name: "Rajiv Sharma",
             role: "Real Estate Developer",
-            quote: "IBT provided us with complete clarity and professional handling of our project. Their team is incredibly knowledgeable and passionate.",
-            image: "/testimonials/client1.jpg"
+            quote:
+                "IBT provided us with complete clarity and professional handling of our project. Their team is incredibly knowledgeable and passionate.",
+            image: "/testimonials/client1.jpg",
         },
         {
             name: "Anita Verma",
             role: "Architect & Consultant",
-            quote: "From planning to execution, the entire process was managed seamlessly. We highly recommend IBT for any construction or design needs.",
-            image: "/testimonials/client2.jpg"
+            quote:
+                "From planning to execution, the entire process was managed seamlessly. We highly recommend IBT for any construction or design needs.",
+            image: "/testimonials/client2.jpg",
         },
         {
             name: "Dr. Sandeep Gupta",
             role: "Hospital Administrator",
-            quote: "Their commitment to quality and safety helped us deliver our hospital project ahead of schedule.",
-            image: "/testimonials/client3.jpg"
-        }
+            quote:
+                "Their commitment to quality and safety helped us deliver our hospital project ahead of schedule.",
+            image: "/testimonials/client3.jpg",
+        },
     ];
 
     return (
-        <section id="testimonials" className="py-16 bg-gray-50">
+        <section id="testimonials" className="py-20 bg-gradient-to-b ">
             <div className="max-w-7xl mx-auto px-6 lg:px-8">
-                <h2 className="text-3xl font-bold text-center text-gray-800">
+                {/* Heading */}
+                <motion.h2
+                    className="text-4xl font-goudy font-bold text-center text-gray-900 mb-4 tracking-tight"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6 }}
+                >
                     What Our Clients Say
-                </h2>
-                <p className="text-center text-gray-600 mt-4 max-w-2xl mx-auto">
-                    Our clients’ satisfaction is at the heart of everything we do. Here’s what they have to say about working with Infinite Building Technologies.
-                </p>
+                </motion.h2>
 
-                <div className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-                    {testimonials.map((testimonial, index) => (
-                        <div
-                            key={index}
-                            className="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center transition-transform hover:scale-105 duration-300"
+                {/* Subheading */}
+                <motion.p
+                    className="text-center text-lg text-gray-600 max-w-2xl mx-auto mb-12 font-serif"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: 0.1 }}
+                >
+                    Our clients’ satisfaction is at the heart of everything we do.
+                </motion.p>
+
+                {/* Testimonials Grid */}
+                <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+                    {testimonials.map((t, idx) => (
+                        <motion.div
+                            key={idx}
+                            className="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center text-center border border-gray-100 hover:shadow-xl transition-all duration-300 group"
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.5, delay: idx * 0.1 }}
+                            whileHover={{ scale: 1.03 }}
                         >
-                            <img
-                                src={testimonial.image}
-                                alt={testimonial.name}
-                                className="w-20 h-20 rounded-full object-cover border-4 border-green-500 shadow-md"
-                            />
-                            <p className="mt-4 text-gray-700 italic">
-                                "{testimonial.quote}"
+                            {/* Profile Image */}
+                            <div className="relative w-20 h-20 rounded-full overflow-hidden border-4 border-teal-500 shadow-lg">
+                                <Image
+                                    src={t.image}
+                                    alt={t.name}
+                                    fill
+                                    className="object-cover"
+                                />
+                            </div>
+
+                            {/* Quote */}
+                            <p className="mt-4 text-gray-700 italic leading-relaxed">
+                                “{t.quote}”
                             </p>
-                            <h3 className="mt-6 font-semibold text-gray-900">{testimonial.name}</h3>
-                            <span className="text-sm text-gray-500">{testimonial.role}</span>
-                        </div>
+
+                            {/* Name */}
+                            <h3 className="mt-6 font-semibold text-gray-900 text-lg">
+                                {t.name}
+                            </h3>
+                            <span className="text-sm text-gray-500">{t.role}</span>
+
+                            {/* Decorative underline */}
+                            <span className="mt-4 block w-12 h-[3px] bg-teal-500 rounded-full"></span>
+                        </motion.div>
                     ))}
                 </div>
             </div>

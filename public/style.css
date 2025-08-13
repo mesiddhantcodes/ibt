@@ -1,0 +1,159 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+body {
+  background: #f5f7fa;
+  color: #2c3e50;
+  line-height: 1.6;
+}
+header {
+  background: #00ac97;
+  color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+}
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+header p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto 20px;
+}
+header a {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px 20px;
+  background: #1abc9c;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+}
+section {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  text-align: center;
+}
+.two-col {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+.col {
+  flex: 1;
+  min-width: 300px;
+}
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+.testimonials {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+.testimonial-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  max-width: 350px;
+  text-align: center;
+}
+.testimonial-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+.testimonial-name {
+  font-weight: 600;
+  margin-top: 10px;
+}
+.testimonial-role {
+  color: #7f8c8d;
+  font-size: 0.9rem;
+}
+footer {
+  background: #002b5b;
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+/* --------------scrolling  */
+/* Showcase Section */
+#showcase {
+  padding: 60px 20px;
+  background: #f5f7fa;
+}
+
+.scrolling-container {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.scrolling-track {
+  display: flex;
+  animation: scroll 20s linear infinite;
+}
+
+.scrolling-item {
+  position: relative;
+  flex: 0 0 auto;
+  width: 400px;
+  margin-right: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.scrolling-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.overlay-text {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  color: white;
+  background: rgba(0, 43, 91, 0.7);
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 600;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s ease;
+}
+
+.scrolling-item:hover .overlay-text {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Animation for scrolling */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

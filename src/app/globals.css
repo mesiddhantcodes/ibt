@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* globals.css */
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;700&display=swap");
+@import "@fontsource/goudy-bookletter-1911";
+@import "@fontsource/merriweather/400.css";
+/* small custom helpers */
+:root {
+  --ibt-blue: #002b5b;
+  --ibt-teal: #1abc9c;
+}
+
+body {
+  @apply bg-white text-gray-800;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Scrolling showcase styles (pure css animation) */
+.scrolling-track {
+  display: flex;
+  gap: 1.25rem;
+  animation: scroll 28s linear infinite;
+}
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+.scrolling-item img {
+  object-fit: cover;
+}
+
+/* small overlay */
+/* .overlay {
+  position: absolute;
+  left: 1rem;
+  bottom: 1rem;
+  background: rgba(0, 43, 91, 0.75);
+  color: #fff;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  font-weight: 600;
+} */
+/* @font-face {
+  font-family: "Goudy Bookletter 1911";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+.name-of-class,
+h1,
+h2,
+h6 {
+  font-family: "Goudy Bookletter 1911", serif;
+} */

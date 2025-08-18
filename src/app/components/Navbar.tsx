@@ -49,7 +49,7 @@ export default function Navbar() {
                         width={0} // Allow responsive sizing
                         height={0} // Allow responsive sizing
                         sizes="120vw"
-                        className="w-44 md:w-52 lg:w-[400px] h-auto"
+                        className="w-56 md:w-60 lg:w-[440px] h-auto"
                         priority
                     />
                 </Link>
@@ -88,7 +88,7 @@ export default function Navbar() {
                                 <Link
                                     key={p.href}
                                     href={p.href}
-                                    className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                                    className="block px-4 py-2 text-[#2AB8A7] hover:bg-gray-100"
                                 >
                                     {p.label}
                                 </Link>
@@ -99,7 +99,7 @@ export default function Navbar() {
 
                 {/* Mobile Menu Toggle */}
                 <button
-                    className="md:hidden px-2 py-1"
+                    className="md:hidden px-2 py-1 text-[#2AB8A7] hover:text-ibtTeal transition"
                     onClick={() => setOpen((s) => !s)}
                     aria-label="Toggle menu"
                 >
@@ -109,7 +109,7 @@ export default function Navbar() {
 
             {/* Mobile Menu */}
             {open && (
-                <div className="md:hidden bg-white shadow-md">
+                <div className="md:hidden text-[#2AB8A7] shadow-md">
                     <div className="flex flex-col px-4 py-4 gap-2">
                         {items.map((i) => (
                             <a
@@ -133,7 +133,7 @@ export default function Navbar() {
                                         key={p.href}
                                         href={p.href}
                                         onClick={() => setOpen(false)}
-                                        className="py-2 border-b text-gray-700"
+                                        className="py-2 border-b "
                                     >
                                         {p.label}
                                     </Link>

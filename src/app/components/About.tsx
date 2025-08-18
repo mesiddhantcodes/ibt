@@ -4,8 +4,8 @@ import Divider from "./Divider";
 
 export default function About() {
     return (
-        <section id="about" className="relative py-20 bg-gradient-to-b ">
-            <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <section id="about" className="relative py-28 bg-gradient-to-b pb-0 ">
+            <div className="max-w-7xl mx-auto px-6 lg:px-0">
 
                 {/* Heading */}
                 <motion.h2

@@ -39,7 +39,7 @@ export default function Navbar() {
     }, []);
 
     return (
-        <header className="fixed w-full z-30 bg-white/95 backdrop-blur-sm shadow-sm">
+        <header className="fixed w-full z-30 bg-white/95 backdrop-blur-sm shadow-md ">
             <div className="max-w-7xl mx-auto px-4 flex items-center justify-between h-28">
                 {/* Logo */}
                 <Link href="/" className="flex items-center gap-3">

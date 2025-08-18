@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Divider from "./Divider";
 
 export default function Testimonials() {
     const testimonials = [
@@ -9,27 +10,27 @@ export default function Testimonials() {
             role: "Real Estate Developer",
             quote:
                 "IBT provided us with complete clarity and professional handling of our project. Their team is incredibly knowledgeable and passionate.",
-            image: "/testimonials/client1.jpg",
+            image: "https://randomuser.me/api/portraits/men/32.jpg",
         },
         {
             name: "Anita Verma",
             role: "Architect & Consultant",
             quote:
                 "From planning to execution, the entire process was managed seamlessly. We highly recommend IBT for any construction or design needs.",
-            image: "/testimonials/client2.jpg",
+            image: "https://randomuser.me/api/portraits/women/44.jpg",
         },
         {
             name: "Dr. Sandeep Gupta",
             role: "Hospital Administrator",
             quote:
                 "Their commitment to quality and safety helped us deliver our hospital project ahead of schedule.",
-            image: "/testimonials/client3.jpg",
+            image: "https://randomuser.me/api/portraits/men/4.jpg",
         },
     ];
 
     return (
-        <section id="testimonials" className="py-20 bg-gradient-to-b ">
-            <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <section id="testimonials" className="py-20 bg-gradient-to-b pb-0 ">
+            <div className="max-w-7xl mx-auto px-6 lg:px-0">
                 {/* Heading */}
                 <motion.h2
                     className="text-4xl font-goudy font-bold text-center text-gray-900 mb-4 tracking-tight"
@@ -91,6 +92,14 @@ export default function Testimonials() {
                     ))}
                 </div>
             </div>
+            <motion.div
+                initial={{ opacity: 0, scaleX: 0 }}
+                whileInView={{ opacity: 1, scaleX: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+            >
+                <Divider />
+            </motion.div>
         </section>
     );
 }

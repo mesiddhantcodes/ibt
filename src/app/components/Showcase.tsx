@@ -15,7 +15,7 @@ export default function Showcase() {
     const list = [...images, ...images];
 
     return (
-        <section id="showcase" className="py-20 ">
+        <section id="showcase" className="py-28 pb-0">
             {/* Heading */}
             <motion.h2
                 className="text-4xl font-goudy font-bold text-center text-gray-900 mb-4 tracking-tight"

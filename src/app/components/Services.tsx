@@ -14,8 +14,8 @@ export default function Services() {
     ];
 
     return (
-        <section id="services" className="py-2 bg-gradient-to-b ">
-            <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <section id="services" className="py-28 pb-0 bg-gradient-to-b ">
+            <div className="max-w-7xl mx-auto px-6 lg:px-0">
                 {/* Section Heading */}
                 <motion.h2
                     className="text-4xl font-goudy font-bold text-center text-gray-900"

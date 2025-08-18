@@ -3,9 +3,11 @@
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import { motion } from "framer-motion";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import { useState } from "react";
 
 interface Project {
     name: string;
@@ -18,7 +20,7 @@ export default function ProjectGrid({ projects }: { projects: Project[] }) {
         <div className="w-full">
             <Swiper
                 modules={[Navigation, Pagination, Autoplay]}
-                spaceBetween={20}
+                spaceBetween={25}
                 slidesPerView={1}
                 navigation
                 pagination={{ clickable: true }}
@@ -28,26 +30,62 @@ export default function ProjectGrid({ projects }: { projects: Project[] }) {
                     768: { slidesPerView: 2 },
                     1024: { slidesPerView: 3 },
                 }}
-                className="pb-10"
+                className="pb-12"
             >
-                {projects.map((proj) => (
+                {projects.map((proj, idx) => (
                     <SwiperSlide key={proj.name}>
-                        <div className="rounded-lg overflow-hidden shadow-lg bg-white hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
-                            <Image
-                                src={proj.image}
-                                alt={proj.name}
-                                width={500}
-                                height={300}
-                                className="w-full h-60 object-cover"
-                            />
-                            <div className="p-4">
-                                <h2 className="font-bold text-lg text-ibtBlue">{proj.name}</h2>
-                                <p className="text-gray-600 text-sm mt-2">{proj.description}</p>
-                            </div>
-                        </div>
+                        <ParallaxCard project={proj} index={idx} />
                     </SwiperSlide>
                 ))}
             </Swiper>
         </div>
+    );
+}
+
+function ParallaxCard({ project, index }: { project: Project; index: number }) {
+    const [transform, setTransform] = useState({ rotateX: 0, rotateY: 0 });
+
+    const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+        const rect = e.currentTarget.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        const rotateX = ((y / rect.height) - 0.5) * 10; // tilt up/down
+        const rotateY = ((x / rect.width) - 0.5) * -10; // tilt left/right
+        setTransform({ rotateX, rotateY });
+    };
+
+    const handleMouseLeave = () => {
+        setTransform({ rotateX: 0, rotateY: 0 });
+    };
+
+    return (
+        <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: index * 0.1 }}
+            style={{
+                transform: `rotateX(${transform.rotateX}deg) rotateY(${transform.rotateY}deg)`,
+                transition: "transform 0.2s ease-out",
+            }}
+            onMouseMove={handleMouseMove}
+            onMouseLeave={handleMouseLeave}
+            className="relative group rounded-xl overflow-hidden shadow-lg bg-white hover:shadow-2xl"
+        >
+            {/* Image */}
+            <div className="relative w-full h-64 overflow-hidden">
+                <Image
+                    src={project.image}
+                    alt={project.name}
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+                {/* Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition duration-500 flex flex-col justify-end p-4">
+                    <h2 className="text-lg font-bold text-white">{project.name}</h2>
+                    <p className="text-gray-200 text-sm mt-1">{project.description}</p>
+                </div>
+            </div>
+        </motion.div>
     );
 }

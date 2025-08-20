@@ -5,7 +5,7 @@ import Image from "next/image";
 import { projectLinks } from "../constants";
 
 export default function BrigadePage() {
-    const brigade = projectLinks.find((p) => p.href === "/brigade");
+    const brigade = projectLinks.find((p) => p.href === "/mantri");
     if (!brigade || !brigade.cases) return null;
 
     return (

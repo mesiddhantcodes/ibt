@@ -29,8 +29,8 @@ Shanthala Nagar, Ashok Nagar, Bengaluru, Karnataka 560025`,
 
     return (
         // <div className="max-w-7xl mx-auto px-6 lg:px-0">
-
-        <section id="contact" className="py-20 max-w-7xl mx-auto px-6 lg:px-0  ">
+// relative py-28 bg-gradient-to-b pb-0 
+        <section id="contact" className="py-28 mx-auto pb-0  ">
             <motion.h2
                 className="text-4xl font-goudy font-bold text-center mb-12 text-gray-900"
                 initial={{ opacity: 0, y: 20 }}

@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
-import { FaMapMarkerAlt, FaPhoneAlt, FaCalendarAlt, FaEnvelope } from "react-icons/fa";
+import { FaMapMarkerAlt, FaPhoneAlt, FaCalendarAlt, FaEnvelope, FaGlobe } from "react-icons/fa";
+import ContactForm from "./ContactForm";
 
 export default function Contact() {
     const contactInfo = [
@@ -13,24 +14,33 @@ Shanthala Nagar, Ashok Nagar, Bengaluru, Karnataka 560025`,
         {
             icon: <FaCalendarAlt size={24} />,
             title: "Working Hours",
-            text: "Weekdays ...... 10 AM to 7 PM",
+            text: "Weekdays:-10 AM to 7 PM",
         },
         {
             icon: <FaPhoneAlt size={24} />,
             title: "Phone",
             text: "+91 97403 23934",
+            link: "tel:+919740323934",
         },
         {
             icon: <FaEnvelope size={24} />,
             title: "Email",
             text: "shobha@infinitebuildingtechnologies.com",
+            link: "mailto:shobha@infinitebuildingtechnologies.com",
+        },
+        {
+            icon: <FaGlobe size={24} />,
+            title: "Website",
+            text: "www.shobhanv.com",
+            link: "http://www.shobhanv.com/",
         },
     ];
 
+
     return (
         // <div className="max-w-7xl mx-auto px-6 lg:px-0">
-// relative py-28 bg-gradient-to-b pb-0 
-        <section id="contact" className="py-28 mx-auto pb-0  ">
+        // relative py-28 bg-gradient-to-b pb-0 
+        <section id="contact" className="py-28 mx-auto pb-2  ">
             <motion.h2
                 className="text-4xl font-goudy font-bold text-center mb-12 text-gray-900"
                 initial={{ opacity: 0, y: 20 }}
@@ -41,7 +51,7 @@ Shanthala Nagar, Ashok Nagar, Bengaluru, Karnataka 560025`,
                 Contact Us
             </motion.h2>
 
-            <div className="max-w-6xl mx-auto grid sm:grid-cols-2 lg:grid-cols-4 gap-10 px-6">
+            <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-5 gap-10 px-6">
                 {contactInfo.map((item, idx) => (
                     <motion.div
                         key={idx}
@@ -57,10 +67,23 @@ Shanthala Nagar, Ashok Nagar, Bengaluru, Karnataka 560025`,
                         </div>
 
                         {/* Text */}
-                        <p className="text-gray-700 font-serif whitespace-pre-line">{item.text}</p>
-                    </motion.div>
+                        {item.link ? (
+                            <a
+                                href={item.link}
+                                target={item.link.startsWith("http") ? "_blank" : "_self"}
+                                rel="noopener noreferrer"
+                                className="text-ibtTeal font-serif underline hover:text-[#2db8a9]"
+                            >
+                                {item.text}
+                            </a>
+                        ) : (
+                            <p className="text-gray-700 font-serif whitespace-pre-line">{item.text}</p>
+                        )}                    </motion.div>
                 ))}
             </div>
+            <ContactForm />
         </section>
+        
     );
 }
+// want to make it click on website link and mailto for the email 

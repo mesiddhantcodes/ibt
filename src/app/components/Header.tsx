@@ -11,7 +11,7 @@ export default function Header() {
         <header className="bg-white shadow-md fixed top-0 w-full z-50">
             <div className="container mx-auto flex justify-between items-center p-4">
                 {/* Logo */}
-                <Link href="/" className="text-xl font-bold " style={{ color: "#2AB8A7" }}
+                <Link href="/" className="text-lg font-bold " style={{ color: "#2AB8A7" }}
                 >
                     MyLogo
                 </Link>

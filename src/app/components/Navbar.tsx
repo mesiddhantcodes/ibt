@@ -48,8 +48,8 @@ export default function Navbar() {
                         alt="IBT"
                         width={0} // Allow responsive sizing
                         height={0} // Allow responsive sizing
-                        sizes="120vw"
-                        className="w-56 md:w-60 lg:w-[440px] h-auto"
+                        sizes="172vw"
+                        className="w-72 md:w-80 lg:w-[480px] h-auto"
                         priority
                     />
                 </Link>

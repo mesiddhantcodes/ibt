@@ -9,13 +9,30 @@ export default function ContactForm() {
         message: "",
     });
 
-    const handleChange = (e) => {
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         setForm({ ...form, [e.target.name]: e.target.value });
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        console.log("Form submitted:", form);
+        try {
+            const response = await fetch("https://script.google.com/macros/s/AKfycbyqBCrvxznxsOl7-8huqgr4I5d5LmCSPdV4E5ld_-PE7_R3oM0vCwlViiP7AhbemQ1b/exec", {
+                method: "POST",
+                body: JSON.stringify(form),
+                headers: {
+                    "Content-Type": "application/json"
+                },
+            });
+            const result = await response.json();
+            console.log("Success:", result);
+            alert("Your message has been sent successfully!");
+            setForm({ name: "", email: "", subject: "", message: "" });
+        }
+        catch (error) {
+            console.error("Error:", error);
+            alert("An error occurred while sending your message. Please try again later.");
+
+        }
     };
 
     return (

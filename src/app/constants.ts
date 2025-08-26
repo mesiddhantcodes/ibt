@@ -139,7 +139,48 @@ export const projectLinks = [
           "MANTRI JUNCTION – CENTRAL MALL @ JP NAGAR – 0.3 M SFT. A 3-acre Retail facility in JP Nagar fully taken over by Pantaloons with anchors, fine dining, and 4 cinema screens.",
         projects: [
           { name: "Mall Central", image: "/images/mantri/CENTRAL.jpg" },
-          { name: "Cinemas & Dining", image: "/images/mantri/mantri.jpg" },
+          { name: "Cinemas & Dining", image: "/images/mantri/Mantri.jpg" },
+        ],
+      },
+      {
+        title: "Residential Projects",
+        description:
+          "MANTRI TRANQUIL KANAKAPURA ROAD – 1.9 M SFT, 18 acres Residential development with 85% landscaped gardens, clubhouse, etc.",
+        projects: [
+          {
+            name: "Mantri Tranquil Towers",
+            image: "/images/mantri/tranquil1.jpg",
+          },
+          {
+            name: "Mantri Tranquil Gardens",
+            image: "/images/mantri/tranquil2.jpg",
+          },
+        ],
+      },
+      {
+        title: "Retail Projects",
+        description:
+          "MANTRI SQUARE MALL – MALLESHWARAM – 1 M SFT. A 6-acre world-class retail mall in Malleswaram with 200+ outlets, 5 anchors, 5 fine dining restaurants, 6 cinema screens (1600+ seats), entertainment zones, and parking for 1600+ cars including India’s first full-fledged mechanical car parking.",
+        projects: [
+          {
+            name: "Shopping Outlets",
+            image: "/images/mantri/MANTRISQUARE.jpg",
+          },
+          { name: "Cinema & Dining", image: "/images/mantri/mantrimall1.jpg" },
+          {
+            name: "Parking Facility",
+            image: "/images/mantri/mnatrisquare2.jpg",
+          },
+        ],
+      },
+      {
+        title: "Residential Projects",
+        description:
+          "MANTRI ESPANA – BELLANDUR – 1.5 M SFT, 15-acre spacious lifestyle residential homes on Outer Ring Road designed with Spanish architecture. 3-, 4-, & 5-bedroom units with 1.5 lac Sft clubhouse, 5 swimming pools, gym, mini golf & private swimming pools for each unit.",
+        projects: [
+          { name: "Clubhouse & Pool", image: "/images/mantri/espana33.jpg" },
+          { name: "Mantri Espana Towers", image: "/images/mantri/espana2.jpg" },
+          { name: "Espana Interiors", image: "/images/mantri/espana3.webp" },
         ],
       },
     ],

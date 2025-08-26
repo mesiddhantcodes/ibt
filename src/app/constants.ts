@@ -118,6 +118,30 @@ export const projectLinks = [
           { name: "Mantri Espana", image: "/images/mantri/CELESTIA1.jpg" },
         ],
       },
+      {
+        title: "Residential Projects",
+        description:
+          "MANTRI SYNERGY – 1 M SFT, 10-acre residential development on OMR road, Padur, Chennai with premium facilities like clubhouse, swimming pool, gym, etc.",
+        projects: [
+          {
+            name: "Mantri Synergy Clubhouse",
+            image: "/images/mantri/SYNERGY.jpg",
+          },
+          {
+            name: "Mantri Synergy Pool & Amenities",
+            image: "/images/mantri/SYNERGY2.jpg",
+          },
+        ],
+      },
+      {
+        title: "Retail Projects",
+        description:
+          "MANTRI JUNCTION – CENTRAL MALL @ JP NAGAR – 0.3 M SFT. A 3-acre Retail facility in JP Nagar fully taken over by Pantaloons with anchors, fine dining, and 4 cinema screens.",
+        projects: [
+          { name: "Mall Central", image: "/images/mantri/CENTRAL.jpg" },
+          { name: "Cinemas & Dining", image: "/images/mantri/mantri.jpg" },
+        ],
+      },
     ],
   },
 ];

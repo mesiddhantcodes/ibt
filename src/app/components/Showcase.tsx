@@ -7,7 +7,7 @@ export default function Showcase() {
     const images = [
         { src: "/images/brigade/gardenia.jpg", label: "Modern Residential Design" },
         { src: "/images/brigade/mlrcc.jpg", label: "Sustainable Commercial Space" },
-        { src: "/images/brigade/summit.jpg", label: "Luxury Hotel Architecture" },
+        { src: "/images/brigade/metro2.jpg", label: "Luxury Hotel Architecture" },
         { src: "/images/brigade/woodrose.jpg", label: "Corporate Office Design" },
         { src: "/images/brigade/techpark.jpg", label: "Premium Retail Interior" },
     ];

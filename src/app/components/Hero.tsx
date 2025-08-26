@@ -31,11 +31,8 @@ export default function Hero() {
                     <SwiperSlide key={index}>
                         <div
                             className="relative w-full h-full bg-cover bg-center"
-                            style={{ backgroundImage: `url(${src})` }}
-                        >
-                            {/* Overlay */}
+                            style={{ backgroundImage: `url(${src})` }}>
                             <div className="absolute inset-0 bg-black/50"></div>
-
                         </div>
                     </SwiperSlide>
                 ))}

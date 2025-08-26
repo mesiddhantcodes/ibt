@@ -44,12 +44,12 @@ export default function Services() {
             text: "Uncompromising attention to construction quality, safety measures, and site management practices."
         },
         // ✅ New Website Card
-        {
-            icon: <FaGlobe className="text-teal-500 text-3xl" />,
-            title: "Visit Our Website",
-            text: "Explore Infinite Building Technologies online for more insights and services.",
-            link: "https://infinitebuildingtech.com/"
-        }
+        // {
+        //     icon: <FaGlobe className="text-teal-500 text-3xl" />,
+        //     title: "Visit Our Website",
+        //     text: "Explore Infinite Building Technologies online for more insights and services.",
+        //     link: "https://infinitebuildingtech.com/"
+        // }
     ];
 
     return (
@@ -86,7 +86,7 @@ export default function Services() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.6, delay: idx * 0.15 }}
-                                onClick={() => s.link && window.open(s.link, "_blank")}
+                                // onClick={() => s.link && window.open(s.link, "_blank")}
                             >
                                 <div className="mb-4">{s.icon}</div>
                                 <h3 className="font-semibold text-xl text-gray-800 font-merri">{s.title}</h3>

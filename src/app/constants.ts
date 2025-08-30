@@ -185,4 +185,42 @@ export const projectLinks = [
       },
     ],
   },
+  {
+    href: "/ascendas",
+    label: "Ascendas Group",
+    description:
+      "Leading developer of IT parks, SEZs, and commercial spaces providing world-class infrastructure for global companies .",
+    cases: [
+      {
+        title: "Ascendas One Hub Gurugram",
+        description:
+          "ASCENDAS ONE HUB GURUGRAM – 5.88 M SFT, 58-acre project on Shona Road, Gurugram. Comprising IT/ITES, Commercial, Residential & Retail developments with integrated world-class infrastructure.",
+        projects: [
+          {
+            name: "IT & ITES Towers",
+            image: "/images/ascendas/ascendas1.jpg",
+          },
+          {
+            name: "Commercial Spaces",
+            image: "/images/ascendas/ascendas2.png",
+          },
+        ],
+      },
+      {
+        title: "International Tech Park Pune (ITPP)",
+        description:
+          "INTERNATIONAL TECH PARK PUNE, HINJEWADI – 2.44 M SFT, 24-acre state-of-the-art IT park offering office spaces with warm shell and plug-and-play facilities. Includes gym, cafeteria, and modern amenities for global enterprises.",
+        projects: [
+          {
+            name: "ITPP Office Towers",
+            image: "/images/ascendas/ITPP-H_3.jpg",
+          },
+          {
+            name: "Plug-and-Play Facilities",
+            image: "/images/ascendas/ITPP-H-4.jpg",
+          },
+        ],
+      },
+    ],
+  },
 ];

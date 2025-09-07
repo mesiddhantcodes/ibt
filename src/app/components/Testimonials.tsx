@@ -6,24 +6,27 @@ import Divider from "./Divider";
 export default function Testimonials() {
     const testimonials = [
         {
-            name: "Rajiv Sharma",
-            role: "Real Estate Developer",
+            name: "Vivek Uthaiah",
+            role: "Partner , Studio30 Architects and Planners",
             quote:
-                "IBT provided us with complete clarity and professional handling of our project. Their team is incredibly knowledgeable and passionate.",
-            image: "https://randomuser.me/api/portraits/men/32.jpg",
+                "I have been professionally associated with Shobha N V over two decades in a wide range of projects. She brings innovative Real estate trends, Project adaptive processes which are grounded and sustainable . These aspects are beneficial for all stakeholder of our projects.",
         },
         {
-            name: "Anita Verma",
-            role: "Architect & Consultant",
-            quote:
-                "From planning to execution, the entire process was managed seamlessly. We highly recommend IBT for any construction or design needs.",
-            image: "https://randomuser.me/api/portraits/women/44.jpg",
+            name: "Manjunath Tv",
+            role: "Chief Executive Officer at BSCPL Infrastructure Ltd",
+            quote: "She is a highly committed and capable leader who ensures quality results with courage and conviction. With expertise across the entire real estate development cycle — from business development to project completion — and thorough knowledge of regulatory requirements, she can confidently spearhead any organization or consulting firm. It has been a pleasure working with her, and results are always assured under her leadership.",
+
         },
         {
-            name: "Dr. Sandeep Gupta",
-            role: "Hospital Administrator",
+            name: "BO Prasanna Kumar",
+            role: "Jt. Managing Director, DesignTree Service Consultants Pvt Ltd",
             quote:
-                "Their commitment to quality and safety helped us deliver our hospital project ahead of schedule.",
+                "Shobha consistently demonstrates professionalism, attention to detail, and a remarkable ability to manage complex projects. Her friendly demeanour and excellent communication skills make her a joy to work with. Knowledge on MEPF systems & standards is exceptional, focus on sustainable design is an added advantage. Process driven approach towards coordination with all stakeholders. Rare combination of practical and design know how with focus on quality is commendable. Her exceptional project coordination skills have been invaluable to success of project.",
+        },
+        {
+            name: "Gururaj Thali",
+            role: "CMD Innotech Engineering Consult Pvt Ltd",
+            quote:"Ms. Shobha is a well-organized engineer with vast talent and a zeal to work effectively with all stakeholders. She is a capable leader who can handle Urban Planning and Master Planning, with the added ability to connect design with costing for better efficiency. Her sound knowledge of structural systems, openness to new ideas, and smooth, result-oriented coordination with consultants make her stand out. With a dynamic and proactive approach, she has proven to be highly successful in a male-dominated industry. I sincerely wish her all the best.",
             image: "https://randomuser.me/api/portraits/men/4.jpg",
         },
     ];
@@ -54,44 +57,43 @@ export default function Testimonials() {
                 </motion.p>
 
                 {/* Testimonials Grid */}
-                <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-                    {testimonials.map((t, idx) => (
-                        <motion.div
-                            key={idx}
-                            className="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center text-center border border-gray-100 hover:shadow-xl transition-all duration-300 group"
-                            initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.5, delay: idx * 0.1 }}
-                            whileHover={{ scale: 1.03 }}
-                        >
-                            {/* Profile Image */}
-                            <div className="relative w-20 h-20 rounded-full overflow-hidden border-4 border-teal-500 shadow-lg">
-                                <Image
-                                    src={t.image}
-                                    alt={t.name}
-                                    fill
-                                    className="object-cover"
-                                />
-                            </div>
+                <div className="overflow-hidden relative">
+                    <motion.div
+                        className="flex gap-6"
+                        initial={{ x: 0 }}
+                        animate={{ x: ["0%", "-100%"] }} // move entire width, not half
+                        transition={{
+                            repeat: Infinity,
+                            repeatType: "loop",
+                            duration: 40, // slower for readability
+                            ease: "linear",
+                        }}
+                    >
+                        {[...testimonials, ...testimonials].map((t, idx) => (
+                            <motion.div
+                                key={idx}
+                                className="bg-white w-[350px] flex-shrink-0 rounded-2xl p-6 flex flex-col items-center text-center border border-gray-100 hover:shadow-xl transition-all duration-300 group"
+                            >
+                                {/* Quote */}
+                                <p className="mt-4 text-gray-700 italic leading-relaxed">
+                                    “{t.quote}”
+                                </p>
 
-                            {/* Quote */}
-                            <p className="mt-4 text-gray-700 italic leading-relaxed">
-                                “{t.quote}”
-                            </p>
+                                {/* Name */}
+                                <h3 className="mt-6 font-semibold text-gray-900 text-lg">
+                                    {t.name}
+                                </h3>
+                                <span className="text-sm text-gray-500">{t.role}</span>
 
-                            {/* Name */}
-                            <h3 className="mt-6 font-semibold text-gray-900 text-lg">
-                                {t.name}
-                            </h3>
-                            <span className="text-sm text-gray-500">{t.role}</span>
-
-                            {/* Decorative underline */}
-                            <span className="mt-4 block w-12 h-[3px] bg-teal-500 rounded-full"></span>
-                        </motion.div>
-                    ))}
+                                {/* Decorative underline */}
+                                <span className="mt-4 block w-12 h-[3px] bg-teal-500 rounded-full"></span>
+                            </motion.div>
+                        ))}
+                    </motion.div>
                 </div>
+
             </div>
+
             <motion.div
                 initial={{ opacity: 0, scaleX: 0 }}
                 whileInView={{ opacity: 1, scaleX: 1 }}

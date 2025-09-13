@@ -2,10 +2,10 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { projectLinks } from "../constants";
+import { residentalsLink } from "../constants";
 
-export default function BrigadePage() {
-    const brigade = projectLinks.find((p) => p.href === "/mantri");
+export default function ResidentalsPage() {
+    const brigade = residentalsLink.find((p) => p.href === "/mixed-use");
     if (!brigade || !brigade.cases) return null;
 
     return (

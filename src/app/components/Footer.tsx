@@ -1,7 +1,13 @@
 "use client";
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 
 export default function Footer() {
+    const [year, setYear] = useState<number | null>(null);
+
+    useEffect(() => {
+        setYear(new Date().getFullYear());
+    }, []);
     return (
         <motion.footer
             className="bg-[#39DFCB] shadow-md text-white py-6 sm:py-8 md:py-10"
@@ -14,7 +20,7 @@ export default function Footer() {
 
                 {/* Left text */}
                 <p className="font-serif text-center md:text-left">
-                    © {new Date().getFullYear()} Infinite Buildings Technologies
+                    © {year ?? ""} Infinite Buildings Technologies
                 </p>
 
                 {/* Right text */}

@@ -2,13 +2,18 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState, useRef, useEffect } from "react";
-import { projectLinks } from "../constants";
+import { residentalsLink, commercialLink } from "../constants";
 export default function Navbar() {
     const [open, setOpen] = useState(false); // Mobile menu
-    const [projectsOpen, setProjectsOpen] = useState(false); // Projects dropdown
+    const [residentalOpen, setResidentalOpen] = useState(false); // Projects dropdown
     const [servicesOpen, setServicesOpen] = useState(false); // Services dropdown
+    const [commercialOpen, setCommercialOpen] = useState(false);
+    // refs
     const servicesRef = useRef<HTMLDivElement>(null);
-    const dropdownRef = useRef<HTMLDivElement>(null);
+    const residentalRef = useRef<HTMLDivElement>(null); // new ref for residentals
+    const commercialRef = useRef<HTMLDivElement>(null);
+
+
 
     const items = [
         { label: "Home", href: "/" },
@@ -29,16 +34,20 @@ export default function Navbar() {
     // Close dropdown when clicking outside
     useEffect(() => {
         function handleClickOutside(e: MouseEvent) {
-            if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
-                setProjectsOpen(false);
+            if (residentalRef.current && !residentalRef.current.contains(e.target as Node)) {
+                setResidentalOpen(false);
             }
             if (servicesRef.current && !servicesRef.current.contains(e.target as Node)) {
                 setServicesOpen(false);
+            }
+            if (commercialRef.current && !commercialRef.current.contains(e.target as Node)) {
+                setCommercialOpen(false);
             }
         }
         document.addEventListener("mousedown", handleClickOutside);
         return () => document.removeEventListener("mousedown", handleClickOutside);
     }, []);
+
 
 
     return (
@@ -49,8 +58,8 @@ export default function Navbar() {
                     <Image
                         src="/images/logoift.webp"
                         alt="IBT"
-                        width={0} // Allow responsive sizing
-                        height={0} // Allow responsive sizing
+                        width={0}
+                        height={0}
                         sizes="172vw"
                         className="w-72 md:w-80 lg:w-[480px] h-auto"
                         priority
@@ -81,7 +90,7 @@ export default function Navbar() {
 
                         <div
                             className={`absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md border border-gray-200 transform transition-all duration-200 ease-out origin-top 
-    ${servicesOpen ? "opacity-100 scale-y-100 pointer-events-auto" : "opacity-0 scale-y-0 pointer-events-none"}`}
+                            ${servicesOpen ? "opacity-100 scale-y-100 pointer-events-auto" : "opacity-0 scale-y-0 pointer-events-none"}`}
                         >
                             <a
                                 href="#services"
@@ -103,26 +112,55 @@ export default function Navbar() {
                     </div>
 
                     {/* Projects Dropdown */}
-                    <div className="relative z-50" ref={dropdownRef}>
+                    <div className="relative z-50" ref={residentalRef}>
                         <button
-                            onClick={() => setProjectsOpen((prev) => !prev)}
+                            onClick={() => setResidentalOpen((prev) => !prev)}
                             className="hover:text-ibtTeal transition flex items-center"
                             style={{ color: "#2AB8A7" }}
                         >
-                            Projects ▾
+                            Residentals ▾
                         </button>
 
                         {/* Animated Dropdown */}
                         <div
-                            className={`absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md border border-gray-200 transform transition-all duration-200 ease-out origin-top ${projectsOpen
+                            className={`absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md border border-gray-200 transform transition-all duration-200 ease-out origin-top ${residentalOpen
                                 ? "opacity-100 scale-y-100"
                                 : "opacity-0 scale-y-0 pointer-events-none"
                                 }`}
                         >
-                            {projectLinks.map((p) => (
+                            {residentalsLink.map((p) => (
                                 <Link
                                     key={p.href}
                                     href={p.href}
+                                    className="block px-4 py-2 text-[#2AB8A7] hover:bg-gray-100"
+                                    onClick={() => setResidentalOpen(false)}
+
+                                >
+                                    {p.label}
+                                </Link>
+                            ))}
+                        </div>
+                    </div>
+                    <div className="relative z-50" ref={commercialRef}>
+                        <button
+                            onClick={() => setCommercialOpen((prev) => !prev)}
+                            className="hover:text-ibtTeal transition flex items-center"
+                            style={{ color: "#2AB8A7" }}
+                        >
+                            Commercial ▾
+                        </button>
+                        <div
+                            className={`absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md border border-gray-200 transform transition-all duration-200 ease-out origin-top ${commercialOpen
+                                ? "opacity-100 scale-y-100"
+                                : "opacity-0 scale-y-0 pointer-events-none"
+                                }`}
+                        >
+                            {commercialLink.map((p) => (
+                                <Link
+                                    key={p.href}
+                                    href={p.href}
+                                    onClick={() => setCommercialOpen(false)}
+
                                     className="block px-4 py-2 text-[#2AB8A7] hover:bg-gray-100"
                                 >
                                     {p.label}
@@ -143,9 +181,11 @@ export default function Navbar() {
             </div>
 
             {/* Mobile Menu */}
+            {/* Mobile Menu */}
             {open && (
                 <div className="md:hidden text-[#2AB8A7] shadow-md">
                     <div className="flex flex-col px-4 py-4 gap-2">
+                        {/* Main Items */}
                         {items.map((i) => (
                             <a
                                 key={i.href}
@@ -157,9 +197,9 @@ export default function Navbar() {
                             </a>
                         ))}
 
-                        {/* Services in mobile */}
-                        <details>
-                            <summary className="py-2 border-b cursor-pointer">Services</summary>
+                        {/* Services */}
+                        <details className="border-b">
+                            <summary className="py-2 cursor-pointer">Services</summary>
                             <div className="flex flex-col pl-4">
                                 <a
                                     href="#services"
@@ -169,27 +209,44 @@ export default function Navbar() {
                                     View Services
                                 </a>
                                 <a
-                                href="https://infinitebuildingtech.com/"
+                                    href="https://infinitebuildingtech.com/"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     onClick={() => setOpen(false)}
                                     className="py-2 border-b"
                                 >
-                                    UPVC                                </a>
+                                    UPVC
+                                </a>
                             </div>
                         </details>
-                        {/* Projects in mobile */}
-                        <details>
-                            <summary className="py-2 border-b cursor-pointer">
-                                Projects
-                            </summary>
+
+                        {/* Residentals */}
+                        <details className="border-b">
+                            <summary className="py-2 cursor-pointer">Residentals</summary>
                             <div className="flex flex-col pl-4">
-                                {projectLinks.map((p) => (
+                                {residentalsLink.map((p) => (
                                     <Link
                                         key={p.href}
                                         href={p.href}
                                         onClick={() => setOpen(false)}
-                                        className="py-2 border-b "
+                                        className="py-2 border-b"
+                                    >
+                                        {p.label}
+                                    </Link>
+                                ))}
+                            </div>
+                        </details>
+
+                        {/* Commercial */}
+                        <details className="border-b">
+                            <summary className="py-2 cursor-pointer">Commercial</summary>
+                            <div className="flex flex-col pl-4">
+                                {commercialLink.map((p) => (
+                                    <Link
+                                        key={p.href}
+                                        href={p.href}
+                                        onClick={() => setOpen(false)}
+                                        className="py-2 border-b"
                                     >
                                         {p.label}
                                     </Link>
@@ -199,6 +256,7 @@ export default function Navbar() {
                     </div>
                 </div>
             )}
+
         </header>
     );
 }

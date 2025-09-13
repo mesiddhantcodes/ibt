@@ -2,10 +2,10 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { projectLinks } from "../constants";
+import { residentalsLink } from "../constants";
 
-export default function AscendasPage() {
-    const brigade = projectLinks.find((p) => p.href === "/ascendas");
+export default function BrigadePage() {
+    const brigade = residentalsLink.find((p) => p.href === "/high-rise");
     if (!brigade || !brigade.cases) return null;
 
     return (

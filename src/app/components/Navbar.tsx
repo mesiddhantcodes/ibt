@@ -118,7 +118,7 @@ export default function Navbar() {
                             className="hover:text-ibtTeal transition flex items-center"
                             style={{ color: "#2AB8A7" }}
                         >
-                            Residentals ▾
+                            Residental ▾
                         </button>
 
                         {/* Animated Dropdown */}
@@ -222,7 +222,7 @@ export default function Navbar() {
 
                         {/* Residentals */}
                         <details className="border-b">
-                            <summary className="py-2 cursor-pointer">Residentals</summary>
+                            <summary className="py-2 cursor-pointer">Residental</summary>
                             <div className="flex flex-col pl-4">
                                 {residentalsLink.map((p) => (
                                     <Link

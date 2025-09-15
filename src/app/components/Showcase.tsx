@@ -5,11 +5,12 @@ import Divider from "./Divider";
 
 export default function Showcase() {
     const images = [
-        { src: "/images/brigade/gardenia.jpg", label: "Modern Residential Design" },
-        { src: "/images/brigade/mlrcc.jpg", label: "Sustainable Commercial Space" },
-        { src: "/images/brigade/metro2.jpg", label: "Luxury Hotel Architecture" },
-        { src: "/images/brigade/woodrose.jpg", label: "Corporate Office Design" },
-        { src: "/images/brigade/techpark.jpg", label: "Premium Retail Interior" },
+        { src: "/images/century/bolli1.jpg", label: "BOLLINENI COUNTY" },
+        { src: "/images/brigade/zion1.jpg", label: "Bollineni Zion Phase 1" },
+        { src: "/images/brigade/zion2.jpg", label: "Bollineni Zion " },
+        // { src: "/images/brigade/woodrose.jpg", label: "Corporate Office Design" },
+        // { src: "/images/brigade/techpark.jpg", label: "Premium Retail Interior" },
+        { src: "/images/brigade/metropolis3.jpg", label: "Clubhouse & Amenities" },
     ];
 
     const list = [...images, ...images];

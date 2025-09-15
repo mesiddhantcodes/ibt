@@ -88,9 +88,9 @@ export default function About() {
                                 </motion.li>
                             ))}
                         </ul>
-                        <p className="mt-6 text-sm text-gray-500 italic text-center">
+                        {/* <p className="mt-6 text-sm text-gray-500 italic text-center">
                             This section is based on the official IBT consultancy profile.
-                        </p>
+                        </p> */}
                     </motion.div>
                 </div>
             </div>

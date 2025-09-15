@@ -4,74 +4,8 @@ export const residentalsLink = [
     href: "/mixed-use",
     label: "Mixed-Use ",
     description:
-      "End-to-end large scale residential, commercial, and mixed-use developments across Bangalore.",
+      " Mixed use developments across Bangalore, chennai & Hyderabad, featuring residential, commercial, retail, and hospitality components.",
     cases: [
-      {
-        title: "BRIGADE MILLENNIUM JP NAGAR",
-        description:
-          "   3 M SFT 21-acre self contained residential enclave (5 blocks) with club house, convention center, 3-acre park & school. ",
-        projects: [
-          {
-            name: " Millennium",
-            image: "/images/brigade/millennium1.jpg",
-          },
-          { name: " Gardenia", image: "/images/brigade/woodrose.jpg" },
-          {
-            name: " Metropolis",
-            image: "/images/brigade/mil.jpg",
-          },
-          {
-            name: " Metropolis",
-            image: "/images/brigade/mlrcc.jpg",
-          },
-        ],
-      },
-      {
-        title: "BRIGADE METROPOLIS RESIDENTIAL",
-        description:
-          " COMMERCIAL/IT SPACE 4 M SFT 36 acres project in Mahadevapura, Whitefield - comprises of Mainly High-rise Residential towers (12 blocks), Office & IT facility, Shopping center, school & Club house",
-        projects: [
-          {
-            name: "Metropolis Tower A",
-            image: "/images/brigade/metro2.jpg",
-          },
-          {
-            name: "Metropolis Tower B",
-            image: "/images/brigade/metropolis2.jpg",
-          },
-          {
-            name: "Clubhouse & Amenities",
-            image: "/images/brigade/metropolis3.jpg",
-          },
-          {
-            name: "Landscape & Open Spaces",
-            image: "/images/brigade/metropolis4.jpg",
-          },
-        ],
-      },
-      {
-        title: "BOLLINENI HILLSIDE 1 & 2, OMR ROAD CHENNAI – 2.5M SFT",
-        description:
-          "92-acre residential project with 2, 3 & 4-bedroom apartments, villas, and row houses. Includes a clubhouse and landscaped amenities.",
-        projects: [
-          {
-            name: "Bollineni Hillside 1",
-            image: "/images/brigade/hillside1.jpg", // replace with your first image
-          },
-          {
-            name: "Bollineni Hillside 2",
-            image: "/images/brigade/hillside2.jpg", // replace with your second image
-          },
-          {
-            name: "Bollineni Hillside 3",
-            image: "/images/brigade/hillside3.png", // replace with your first image
-          },
-          {
-            name: "Bollineni Hillside 4",
-            image: "/images/brigade/hillside4.png", // replace with your second image
-          },
-        ],
-      },
       {
         title: "BRIGADE GATEWAY MALLESHWARAM",
         description:
@@ -99,6 +33,73 @@ export const residentalsLink = [
           },
         ],
       },
+      {
+        title: "BRIGADE METROPOLIS RESIDENTIAL",
+        description:
+          " COMMERCIAL/IT SPACE 4 M SFT 36 acres project in Mahadevapura, Whitefield - comprises of Mainly High-rise Residential towers (12 blocks), Office & IT facility, Shopping center, school & Club house",
+        projects: [
+          {
+            name: "Metropolis Tower A",
+            image: "/images/brigade/metro2.jpg",
+          },
+          {
+            name: "Metropolis Tower B",
+            image: "/images/brigade/metropolis2.jpg",
+          },
+          {
+            name: "Clubhouse & Amenities",
+            image: "/images/brigade/metropolis3.jpg",
+          },
+          {
+            name: "Landscape & Open Spaces",
+            image: "/images/brigade/metropolis4.jpg",
+          },
+        ],
+      },
+      {
+        title: "BRIGADE MILLENNIUM JP NAGAR",
+        description:
+          "   3 M SFT 21-acre self contained residential enclave (5 blocks) with club house, convention center, 3-acre park & school. ",
+        projects: [
+          {
+            name: " Millennium",
+            image: "/images/brigade/millennium1.jpg",
+          },
+          { name: " Gardenia", image: "/images/brigade/woodrose.jpg" },
+          {
+            name: " Metropolis",
+            image: "/images/brigade/mil.jpg",
+          },
+          {
+            name: " Metropolis",
+            image: "/images/brigade/mlrcc.jpg",
+          },
+        ],
+      },
+      
+      {
+        title: "BOLLINENI HILLSIDE 1 & 2, OMR ROAD CHENNAI – 2.5M SFT",
+        description:
+          "92-acre residential project with 2, 3 & 4-bedroom apartments, villas, and row houses. Includes a clubhouse and landscaped amenities.",
+        projects: [
+          {
+            name: "Bollineni Hillside 1",
+            image: "/images/brigade/hillside1.jpg", // replace with your first image
+          },
+          {
+            name: "Bollineni Hillside 2",
+            image: "/images/brigade/hillside2.jpg", // replace with your second image
+          },
+          {
+            name: "Bollineni Hillside 3",
+            image: "/images/brigade/hillside3.png", // replace with your first image
+          },
+          {
+            name: "Bollineni Hillside 4",
+            image: "/images/brigade/hillside4.png", // replace with your second image
+          },
+        ],
+      },
 
       {
         title: "Bollineni Zion, OMR, Chennai – 3.2M SFT",
@@ -107,19 +108,19 @@ export const residentalsLink = [
         projects: [
           {
             name: "Bollineni Zion Phase 1",
-            image: "/images/brigade/zion1.jpg", // replace with your first image
+            image: "/images/brigade/zion1.jpg",
           },
           {
             name: "Bollineni Zion Phase 2",
-            image: "/images/brigade/zion2.jpg", // replace with your second image
+            image: "/images/brigade/zion2.jpg",
           },
           {
             name: "Bollineni Zion Phase 1",
-            image: "/images/brigade/zion3.jpg", // replace with your first image
+            image: "/images/brigade/zion3.jpg",
           },
           {
             name: "Bollineni Zion Phase 2",
-            image: "/images/brigade/zion4.jpg", // replace with your second image
+            image: "/images/brigade/zion4.jpg",
           },
         ],
       },
@@ -151,7 +152,7 @@ export const residentalsLink = [
   {
     href: "/high-rise",
     label: "High Rise",
-    description: "Premium residential and commercial projects in Bangalore.",
+    description: "Premium Residential projects in Bangalore chennai & Hyderabad.",
     cases: [
       {
         title: "BRIGADE GARDENIA, KOTHANUR, JP NAGAR – 1.4M SFT",
@@ -465,7 +466,7 @@ export const commercialLink = [
           },
         ],
       },
-      
+
       {
         title: "INTERNATIONAL TECH PARK CHENNAI – 1 M SFT",
         description:

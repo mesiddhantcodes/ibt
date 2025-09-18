@@ -65,18 +65,18 @@ export const residentalsLink = [
             name: " Millennium",
             image: "/images/brigade/millennium1.jpg",
           },
-          { name: " Gardenia", image: "/images/brigade/woodrose.jpg" },
+          { name: " Millennium", image: "/images/brigade/woodrose.jpg" },
           {
-            name: " Metropolis",
+            name: " Millennium",
             image: "/images/brigade/mil.jpg",
           },
           {
-            name: " Metropolis",
+            name: " Millennium",
             image: "/images/brigade/mlrcc.jpg",
           },
         ],
       },
-      
+
       {
         title: "BOLLINENI HILLSIDE 1 & 2, OMR ROAD CHENNAI – 2.5M SFT",
         description:
@@ -152,7 +152,8 @@ export const residentalsLink = [
   {
     href: "/high-rise",
     label: "High Rise",
-    description: "Premium Residential projects in Bangalore chennai & Hyderabad.",
+    description:
+      "Premium Residential projects in Bangalore chennai & Hyderabad.",
     cases: [
       {
         title: "BRIGADE GARDENIA, KOTHANUR, JP NAGAR – 1.4M SFT",
@@ -186,15 +187,6 @@ export const residentalsLink = [
       },
 
       {
-        title: "Retail Projects",
-        description:
-          "MANTRI JUNCTION – CENTRAL MALL @ JP NAGAR – 0.3 M SFT. A 3-acre Retail facility in JP Nagar fully taken over by Pantaloons with anchors, fine dining, and 4 cinema screens.",
-        projects: [
-          { name: "Mall Central", image: "/images/mantri/CENTRAL.jpg" },
-          { name: "Cinemas & Dining", image: "/images/mantri/Mantri.jpg" },
-        ],
-      },
-      {
         title: "MANTRI TRANQUIL, KANAKAPURA ROAD – 1.9M SFT",
         description:
           "18-acre residential development with 85% landscaped gardens, clubhouse, and premium lifestyle amenities.",
@@ -210,22 +202,6 @@ export const residentalsLink = [
         ],
       },
 
-      {
-        title: "Retail Projects",
-        description:
-          "MANTRI SQUARE MALL – MALLESHWARAM – 1 M SFT. A 6-acre world-class retail mall in Malleswaram with 200+ outlets, 5 anchors, 5 fine dining restaurants, 6 cinema screens (1600+ seats), entertainment zones, and parking for 1600+ cars including India’s first full-fledged mechanical car parking.",
-        projects: [
-          {
-            name: "Shopping Outlets",
-            image: "/images/mantri/MANTRISQUARE.jpg",
-          },
-          { name: "Cinema & Dining", image: "/images/mantri/mantrimall1.jpg" },
-          {
-            name: "Parking Facility",
-            image: "/images/mantri/mnatrisquare2.jpg",
-          },
-        ],
-      },
       {
         title: "MANTRI ESPANA, BELLANDUR – 1.5M SFT",
         description:
@@ -400,22 +376,22 @@ export const commercialLink = [
       "Showcasing end-to-end large-scale commercial and IT developments across Bangalore, featuring state-of-the-art office spaces and modern infrastructure.",
     cases: [
       {
-        title: "BRIGADE MILLENNIUM JP NAGAR",
+        title: "BRIGADE TECH PARK",
         description:
-          "3 M SFT 21-acre self contained residential enclave (5 blocks) with club house, convention center, 3-acre park & school.",
+          "Commercial / IT space of 0.7 M SFT located in Whitefield.",
         projects: [
           { name: "TechPark", image: "/images/brigade/techpark.jpg" },
           { name: "TechPark", image: "/images/brigade/techpark2.jpg" },
         ],
       },
-      {
-        title: "BRIGADE SOUTH PARADE",
-        description: "COMMERCIAL / IT SPACE 0.4 M SFT, MG ROAD",
-        projects: [
-          { name: "South Parade", image: "/images/brigade/southparade.jpg" },
-          { name: "South Parade", image: "/images/brigade/southprade2.jpg" },
-        ],
-      },
+      // {
+      //   title: "BRIGADE SOUTH PARADE",
+      //   description: "COMMERCIAL / IT SPACE 0.4 M SFT, MG ROAD",
+      //   projects: [
+      //     { name: "South Parade", image: "/images/brigade/southparade.jpg" },
+      //     { name: "South Parade", image: "/images/brigade/southprade2.jpg" },
+      //   ],
+      // },
     ],
   },
   {

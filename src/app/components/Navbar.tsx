@@ -8,10 +8,13 @@ export default function Navbar() {
     const [residentalOpen, setResidentalOpen] = useState(false); // Projects dropdown
     const [servicesOpen, setServicesOpen] = useState(false); // Services dropdown
     const [commercialOpen, setCommercialOpen] = useState(false);
+    const [downloadsOpen, setDownloadsOpen] = useState(false); // ✅ new state
+
     // refs
     const servicesRef = useRef<HTMLDivElement>(null);
     const residentalRef = useRef<HTMLDivElement>(null); // new ref for residentals
     const commercialRef = useRef<HTMLDivElement>(null);
+    const downloadsRef = useRef<HTMLDivElement>(null); // ✅ new ref
 
 
 
@@ -42,6 +45,9 @@ export default function Navbar() {
             }
             if (commercialRef.current && !commercialRef.current.contains(e.target as Node)) {
                 setCommercialOpen(false);
+            }
+            if (downloadsRef.current && !downloadsRef.current.contains(e.target as Node)) {
+                setDownloadsOpen(false);
             }
         }
         document.addEventListener("mousedown", handleClickOutside);
@@ -85,7 +91,7 @@ export default function Navbar() {
                             className="hover:text-ibtTeal transition flex items-center"
                             style={{ color: "#2AB8A7" }}
                         >
-                            Services ▾
+                            Services▾
                         </button>
 
                         <div
@@ -118,7 +124,7 @@ export default function Navbar() {
                             className="hover:text-ibtTeal transition flex items-center"
                             style={{ color: "#2AB8A7" }}
                         >
-                            Residental ▾
+                            Residental▾
                         </button>
 
                         {/* Animated Dropdown */}
@@ -147,7 +153,7 @@ export default function Navbar() {
                             className="hover:text-ibtTeal transition flex items-center"
                             style={{ color: "#2AB8A7" }}
                         >
-                            Commercial ▾
+                            Commercial▾
                         </button>
                         <div
                             className={`absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md border border-gray-200 transform transition-all duration-200 ease-out origin-top ${commercialOpen
@@ -168,6 +174,41 @@ export default function Navbar() {
                             ))}
                         </div>
                     </div>
+                    {/* ✅ Downloads Button with Popup */}
+                    <div className="relative z-50" ref={downloadsRef}>
+                        <button
+                            onClick={() => setDownloadsOpen((prev) => !prev)}
+                            className="bg-gradient-to-r from-[#2AB8A7] to-[#229d8d] text-white px-5 py-2.5 
+               rounded-full shadow-lg hover:scale-105 hover:shadow-xl 
+               transition-transform duration-200 ease-in-out font-semibold flex items-center gap-2"
+                        >
+                            Download
+                        </button>
+                        <div
+                            className={`absolute right-0 mt-2 w-64 bg-white shadow-lg rounded-md border border-gray-200 transform transition-all duration-200 ease-out origin-top ${downloadsOpen
+                                ? "opacity-100 scale-y-100"
+                                : "opacity-0 scale-y-0 pointer-events-none"
+                                }`}
+                        >
+                            <a
+                                href="/downloads/brochure.pdf"
+                                download
+                                className="block px-4 py-3 text-[#2AB8A7] hover:bg-gray-100 font-medium"
+                                onClick={() => setDownloadsOpen(false)}
+                            >
+                                📄 Download Brochure
+                            </a>
+                            <a
+                                href="/downloads/visiting-card.pdf"
+                                download
+                                className="block px-4 py-3 text-[#2AB8A7] hover:bg-gray-100 font-medium"
+                                onClick={() => setDownloadsOpen(false)}
+                            >
+                                💳 Download Visiting Card
+                            </a>
+                        </div>
+                    </div>
+
                 </nav>
 
                 {/* Mobile Menu Toggle */}
@@ -253,6 +294,68 @@ export default function Navbar() {
                                 ))}
                             </div>
                         </details>
+                        {/* <details className="border-b">
+                            <summary className="py-2 cursor-pointer">Downloads</summary>
+                            <div className="flex flex-col pl-4">
+                                <a
+                                    href="/downloads/brochure.pdf"
+                                    download
+                                    onClick={() => setOpen(false)}
+                                    className="py-2 border-b"
+                                >
+                                    📄 Download Brochure
+                                </a>
+                                <a
+                                    href="/downloads/visiting-card.pdf"
+                                    download
+                                    onClick={() => setOpen(false)}
+                                    className="py-2 border-b"
+                                >
+                                    💳 Download Visiting Card
+                                </a>
+                            </div>
+                        </details> */}
+                        <div className="px-4 py-3">
+                            {/* Toggle Button */}
+                            <button
+                                onClick={() => setDownloadsOpen((prev) => !prev)}
+                                className="w-full bg-gradient-to-r from-[#2AB8A7] to-[#229d8d] text-white py-3 
+               rounded-xl font-semibold shadow-md hover:scale-[1.02] transition flex items-center justify-center gap-2"
+                            >
+                                📥 Downloads
+                                <span
+                                    className={`transform transition-transform ${downloadsOpen ? "rotate-180" : "rotate-0"
+                                        }`}
+                                >
+                                    ▾
+                                </span>
+                            </button>
+
+                            {/* Collapsible Section */}
+                            <div
+                                className={`mt-2 flex flex-col gap-2 overflow-hidden transition-all duration-300 ease-in-out ${downloadsOpen ? "max-h-40 opacity-100" : "max-h-0 opacity-0"
+                                    }`}
+                            >
+                                <a
+                                    href="/downloads/brochure.pdf"
+                                    download
+                                    className="block w-full px-4 py-2 text-center text-[#2AB8A7] border rounded-md bg-white hover:bg-gray-100 transition"
+                                    onClick={() => setDownloadsOpen(false)} 
+                                >
+                                    📄 Download Brochure
+                                </a>
+                                <a
+                                    href="/downloads/visiting-card.pdf"
+                                    download
+                                    className="block w-full px-4 py-2 text-center text-[#2AB8A7] border rounded-md bg-white hover:bg-gray-100 transition"
+                                    onClick={() => setDownloadsOpen(false)} 
+                                >
+                                    💳 Download Visiting Card
+                                </a>
+                            </div>
+                        </div>
+
+
                     </div>
                 </div>
             )}

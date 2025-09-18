@@ -12,7 +12,7 @@ export default function itItesSezPage() {
         <section id="brigade" className="py-20 bg-gradient-to-b from-white to-gray-50">
             <div className="max-w-7xl mx-auto px-6 lg:px-8">
                 <motion.h1
-                    className="text-4xl font-goudy font-bold text-center text-gray-900 mb-4 tracking-tight"
+                    className="text-4xl font-merri font-bold text-center text-gray-900 mb-4 tracking-tight"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}

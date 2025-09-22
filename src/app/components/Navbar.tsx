@@ -8,6 +8,8 @@ export default function Navbar() {
     const [residentalOpen, setResidentalOpen] = useState(false); // Projects dropdown
     const [servicesOpen, setServicesOpen] = useState(false); // Services dropdown
     const [commercialOpen, setCommercialOpen] = useState(false);
+    const [mobileDownloadsOpen, setMobileDownloadsOpen] = useState(false);
+
     const [downloadsOpen, setDownloadsOpen] = useState(false); // ✅ new state
 
     // refs
@@ -315,32 +317,31 @@ export default function Navbar() {
                                 </a>
                             </div>
                         </details> */}
+                        {/* Mobile Downloads Section */}
                         <div className="px-4 py-3">
-                            {/* Toggle Button */}
                             <button
-                                onClick={() => setDownloadsOpen((prev) => !prev)}
+                                onClick={() => setMobileDownloadsOpen((prev) => !prev)}
                                 className="w-full bg-gradient-to-r from-[#2AB8A7] to-[#229d8d] text-white py-3 
-               rounded-xl font-semibold shadow-md hover:scale-[1.02] transition flex items-center justify-center gap-2"
+      rounded-xl font-semibold shadow-md hover:scale-[1.02] transition flex items-center justify-center gap-2"
                             >
                                 📥 Downloads
                                 <span
-                                    className={`transform transition-transform ${downloadsOpen ? "rotate-180" : "rotate-0"
+                                    className={`transform transition-transform ${mobileDownloadsOpen ? "rotate-180" : "rotate-0"
                                         }`}
                                 >
                                     ▾
                                 </span>
                             </button>
 
-                            {/* Collapsible Section */}
                             <div
-                                className={`mt-2 flex flex-col gap-2 overflow-hidden transition-all duration-300 ease-in-out ${downloadsOpen ? "max-h-40 opacity-100" : "max-h-0 opacity-0"
+                                className={`mt-2 flex flex-col gap-2 overflow-hidden transition-all duration-300 ease-in-out ${mobileDownloadsOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
                                     }`}
                             >
                                 <a
                                     href="/downloads/brochure.pdf"
                                     download
                                     className="block w-full px-4 py-2 text-center text-[#2AB8A7] border rounded-md bg-white hover:bg-gray-100 transition"
-                                    onClick={() => setDownloadsOpen(false)} 
+                                    onClick={() => setMobileDownloadsOpen(false)} // ✅ close dropdown on click
                                 >
                                     📄 Download Brochure
                                 </a>
@@ -348,12 +349,13 @@ export default function Navbar() {
                                     href="/downloads/visiting-card.pdf"
                                     download
                                     className="block w-full px-4 py-2 text-center text-[#2AB8A7] border rounded-md bg-white hover:bg-gray-100 transition"
-                                    onClick={() => setDownloadsOpen(false)} 
+                                    onClick={() => setMobileDownloadsOpen(false)} // ✅ close dropdown on click
                                 >
                                     💳 Download Visiting Card
                                 </a>
                             </div>
                         </div>
+
 
 
                     </div>

@@ -101,13 +101,13 @@ export default function Navbar() {
                             className={`absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md border border-gray-200 transform transition-all duration-200 ease-out origin-top 
                             ${servicesOpen ? "opacity-100 scale-y-100 pointer-events-auto" : "opacity-0 scale-y-0 pointer-events-none"}`}
                         >
-                            <a
+                            <Link
                                 href="/#services"
                                 onClick={() => setServicesOpen(false)}
                                 className="block px-4 py-2 text-[#2AB8A7] hover:bg-gray-100"
                             >
                                 View Services
-                            </a>
+                            </Link>
                             <a
                                 href="https://infinitebuildingtech.com/"
                                 target="_blank"
@@ -245,13 +245,13 @@ export default function Navbar() {
                         <details className="border-b">
                             <summary className="py-2 cursor-pointer">Services</summary>
                             <div className="flex flex-col pl-4">
-                                <a
+                                <Link
                                     href="/#services"
                                     onClick={() => setOpen(false)}
                                     className="py-2 border-b"
                                 >
                                     View Services
-                                </a>
+                                </Link>
                                 <a
                                     href="https://infinitebuildingtech.com/"
                                     target="_blank"

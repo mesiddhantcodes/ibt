@@ -22,11 +22,12 @@ export default function Navbar() {
 
     const items = [
         { label: "Home", href: "/" },
-        { label: "About", href: "#about" },
-        // { label: "Services", href: "#services" },
-        { label: "Showcase", href: "#showcase" },
-        { label: "Contact", href: "#contact" },
+        { label: "About", href: "/#about" },
+        { label: "Showcase", href: "/#showcase" },
+        { label: " Services", href: "/#services" },
+        { label: "Contact", href: "/#contact" },
     ];
+
 
     // const projectLinks = [
     //     { label: "Brigade Group", href: "/brigade" },
@@ -101,7 +102,7 @@ export default function Navbar() {
                             ${servicesOpen ? "opacity-100 scale-y-100 pointer-events-auto" : "opacity-0 scale-y-0 pointer-events-none"}`}
                         >
                             <a
-                                href="#services"
+                                href="/#services"
                                 onClick={() => setServicesOpen(false)}
                                 className="block px-4 py-2 text-[#2AB8A7] hover:bg-gray-100"
                             >
@@ -193,7 +194,7 @@ export default function Navbar() {
                                 }`}
                         >
                             <a
-                                href="/downloads/brochure.pdf"
+                                href="/downloads/Infinite Building Technologies Consultancy Profile.pdf"
                                 download
                                 className="block px-4 py-3 text-[#2AB8A7] hover:bg-gray-100 font-medium"
                                 onClick={() => setDownloadsOpen(false)}
@@ -201,7 +202,7 @@ export default function Navbar() {
                                 📄 Download Brochure
                             </a>
                             <a
-                                href="/downloads/visiting-card.pdf"
+                                href="/downloads/VISTING-CARD.jpg"
                                 download
                                 className="block px-4 py-3 text-[#2AB8A7] hover:bg-gray-100 font-medium"
                                 onClick={() => setDownloadsOpen(false)}
@@ -245,7 +246,7 @@ export default function Navbar() {
                             <summary className="py-2 cursor-pointer">Services</summary>
                             <div className="flex flex-col pl-4">
                                 <a
-                                    href="#services"
+                                    href="/#services"
                                     onClick={() => setOpen(false)}
                                     className="py-2 border-b"
                                 >
@@ -296,28 +297,7 @@ export default function Navbar() {
                                 ))}
                             </div>
                         </details>
-                        {/* <details className="border-b">
-                            <summary className="py-2 cursor-pointer">Downloads</summary>
-                            <div className="flex flex-col pl-4">
-                                <a
-                                    href="/downloads/brochure.pdf"
-                                    download
-                                    onClick={() => setOpen(false)}
-                                    className="py-2 border-b"
-                                >
-                                    📄 Download Brochure
-                                </a>
-                                <a
-                                    href="/downloads/visiting-card.pdf"
-                                    download
-                                    onClick={() => setOpen(false)}
-                                    className="py-2 border-b"
-                                >
-                                    💳 Download Visiting Card
-                                </a>
-                            </div>
-                        </details> */}
-                        {/* Mobile Downloads Section */}
+
                         <div className="px-4 py-3">
                             <button
                                 onClick={() => setMobileDownloadsOpen((prev) => !prev)}
@@ -338,18 +318,18 @@ export default function Navbar() {
                                     }`}
                             >
                                 <a
-                                    href="/downloads/brochure.pdf"
+                                href="/downloads/Infinite Building Technologies Consultancy Profile.pdf"
                                     download
                                     className="block w-full px-4 py-2 text-center text-[#2AB8A7] border rounded-md bg-white hover:bg-gray-100 transition"
-                                    onClick={() => setMobileDownloadsOpen(false)} // ✅ close dropdown on click
+                                    onClick={() => setMobileDownloadsOpen(false)}
                                 >
                                     📄 Download Brochure
                                 </a>
                                 <a
-                                    href="/downloads/visiting-card.pdf"
+                                href="/downloads/VISTING-CARD.jpg"
                                     download
                                     className="block w-full px-4 py-2 text-center text-[#2AB8A7] border rounded-md bg-white hover:bg-gray-100 transition"
-                                    onClick={() => setMobileDownloadsOpen(false)} // ✅ close dropdown on click
+                                    onClick={() => setMobileDownloadsOpen(false)}
                                 >
                                     💳 Download Visiting Card
                                 </a>

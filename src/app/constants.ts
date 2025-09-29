@@ -47,7 +47,7 @@ export const residentalsLink = [
             image: "/images/brigade/metropolis2.jpg",
           },
           {
-            name: "Clubhouse & Amenities",
+            name: "Metropolis Tower A",
             image: "/images/brigade/metropolis3.jpg",
           },
           {
@@ -83,20 +83,20 @@ export const residentalsLink = [
           "92-acre residential project with 2, 3 & 4-bedroom apartments, villas, and row houses. Includes a clubhouse and landscaped amenities.",
         projects: [
           {
-            name: "Bollineni Hillside 1",
-            image: "/images/brigade/hillside1.jpg", // replace with your first image
+            name: "Bollineni Hillside ",
+            image: "/images/brigade/hillside1.jpg",
           },
           {
-            name: "Bollineni Hillside 2",
-            image: "/images/brigade/hillside2.jpg", // replace with your second image
+            name: "Bollineni Hillside ",
+            image: "/images/brigade/hillside2.jpg",
           },
           {
-            name: "Bollineni Hillside 3",
-            image: "/images/brigade/hillside3.png", // replace with your first image
+            name: "Bollineni Hillside ",
+            image: "/images/brigade/hillside3.png",
           },
           {
-            name: "Bollineni Hillside 4",
-            image: "/images/brigade/hillside4.png", // replace with your second image
+            name: "Bollineni Hillside ",
+            image: "/images/brigade/hillside4.png",
           },
         ],
       },
@@ -152,24 +152,7 @@ export const residentalsLink = [
   {
     href: "/high-rise",
     label: "High Rise",
-    description:
-      "Premium Residential projects in Bangalore chennai & Hyderabad.",
     cases: [
-      {
-        title: "BRIGADE GARDENIA, KOTHANUR, JP NAGAR – 1.4M SFT",
-        description:
-          "14-acre residential development comprising 6 blocks with clubhouse and parking facilities.",
-        projects: [
-          {
-            name: "Brigade Gardenia ",
-            image: "/images/brigade/gardenia1.jpg",
-          },
-          {
-            name: "Brigade Gardenia ",
-            image: "/images/brigade/gardenia2.jpg",
-          },
-        ],
-      },
       {
         title: "MANTRI SYNERGY – 1M SFT",
         description:
@@ -324,6 +307,10 @@ export const residentalsLink = [
             name: "Bollineni Bion Block ",
             image: "/images/mantri/bion4.jpg",
           },
+          {
+            name: "Bollineni Bion Block ",
+            image: "/images/mantri/biiion.jpg",
+          },
         ],
       },
     ],
@@ -331,8 +318,6 @@ export const residentalsLink = [
   {
     href: "/plotted-villas",
     label: "Plotted/Villas",
-    description:
-      "Leading developer of IT parks, SEZs, and commercial spaces providing world-class infrastructure for global companies .",
     cases: [
       {
         title: "CENTURY EDEN, DODDABALLAPUR ROAD – 41 ACRES",
@@ -466,6 +451,21 @@ export const commercialLink = [
     description:
       "Premium retail destinations offering world-class shopping, dining, entertainment, and leisure experiences across Bangalore and other key cities.",
     cases: [
+      {
+        title: "BRIGADE GARDENIA, KOTHANUR, JP NAGAR – 1.4M SFT",
+        description:
+          "14-acre residential development comprising 6 blocks with clubhouse and parking facilities.",
+        projects: [
+          {
+            name: "Brigade Gardenia ",
+            image: "/images/brigade/gardenia1.jpg",
+          },
+          {
+            name: "Brigade Gardenia ",
+            image: "/images/brigade/gardenia2.jpg",
+          },
+        ],
+      },
       {
         title: "MANTRI JUNCTION – CENTRAL MALL @ JP NAGAR – 0.3 M SFT",
         description:

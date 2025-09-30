@@ -1,8 +1,10 @@
 {
-  "rewrites": [
+  "version": 2,
+  "redirects": [
     {
-      "source": "/upvc_services/:match*",
-      "destination": "https://infinitebuildingtech.com/upvc_services/:match*"
+      "source": "/upvc_services/:path*",
+      "destination": "https://infinitebuildingtech.com/upvc_services/:path*",
+      "permanent": false
     }
   ]
 }

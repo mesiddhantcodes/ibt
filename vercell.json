@@ -1,8 +1,1 @@
-{
-  "rewrites": [
-    {
-      "source": "/upvc_services/:match*",
-      "destination": "https://infinitebuildingtech.com/upvc_services/:match*"
-    }
-  ]
-}
+{}

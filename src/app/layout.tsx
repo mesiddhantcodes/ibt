@@ -18,9 +18,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Navbar />
         <main className="flex-1 pt-16">{children}</main>
         <Footer />
-
         <a
-          href="https://wa.me/+919740323934" 
+          href="https://wa.me/+919740323934"
           target="_blank"
           rel="noopener noreferrer"
           className="group fixed bottom-6 right-6 flex items-center justify-center p-4 rounded-full 
@@ -30,8 +29,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                duration-300"
         >
           <FaWhatsapp size={30} />
-
-          {/* Tooltip */}
           <span className="absolute bottom-16 right-0 bg-black text-white text-sm px-2 py-1 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             Chat with us
           </span>

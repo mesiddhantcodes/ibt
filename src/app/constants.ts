@@ -154,93 +154,29 @@ export const residentalsLink = [
     label: "High Rise",
     cases: [
       {
-        title: "MANTRI SYNERGY – 1M SFT",
+        title: "BOLLINENI BION, KONDAPUR, HYDERABAD – 2.8M SFT",
         description:
-          "10-acre residential development on OMR Road, Padur, Chennai. Premium high-rise residences with clubhouse, swimming pool, gym, and other amenities.",
+          "8.6-acre premium high-end residential development in Kondapur, Hyderabad with landscaped gardens, clubhouse, and premium lifestyle amenities.",
         projects: [
           {
-            name: "Mantri Synergy Clubhouse",
-            image: "/images/mantri/SYNERGY.jpg",
+            name: "Bollineni Bion Block ",
+            image: "/images/mantri/bion1.jpg",
           },
           {
-            name: "Mantri Synergy Pool & Amenities",
-            image: "/images/mantri/SYNERGY2.jpg",
-          },
-        ],
-      },
-
-      {
-        title: "MANTRI TRANQUIL, KANAKAPURA ROAD – 1.9M SFT",
-        description:
-          "18-acre residential development with 85% landscaped gardens, clubhouse, and premium lifestyle amenities.",
-        projects: [
-          {
-            name: "Mantri Tranquil Towers",
-            image: "/images/mantri/tranquil1.jpg",
+            name: "Bollineni Bion Block ",
+            image: "/images/mantri/bion2.jpg",
           },
           {
-            name: "Mantri Tranquil Gardens",
-            image: "/images/mantri/tranquil2.jpg",
-          },
-        ],
-      },
-
-      {
-        title: "MANTRI ESPANA, BELLANDUR – 1.5M SFT",
-        description:
-          "15-acre spacious lifestyle residential community on Outer Ring Road, designed with Spanish architecture. Features 3, 4 & 5-bedroom units, a 1.5 lakh sq.ft clubhouse, 5 swimming pools, gym, mini golf, and private pools for each unit.",
-        projects: [
-          { name: "Clubhouse & Pool", image: "/images/mantri/espana33.jpg" },
-          { name: "Mantri Espana Towers", image: "/images/mantri/espana2.jpg" },
-          { name: "Espana Interiors", image: "/images/mantri/espana3.webp" },
-        ],
-      },
-      {
-        title: "CENTURY BREEZE, YELAHANKA – 0.7M SFT",
-        description:
-          "Premium residential apartments in Yelahanka offering spacious homes with modern lifestyle amenities.",
-        projects: [
-          {
-            name: "Century Breeze Tower 1",
-            image: "/images/mantri/breeze1.jpg",
+            name: "Bollineni Bion Block ",
+            image: "/images/mantri/bion3.jpg",
           },
           {
-            name: "Century Breeze Tower 2",
-            image: "/images/mantri/breeze2.jpg",
-          },
-        ],
-      },
-      {
-        title: "CENTURY CENTRAL – 0.8M SFT",
-        description:
-          "Residential high-rise development offering premium apartments and office spaces with warm shell & plug-n-play facilities.",
-        projects: [
-          {
-            name: "Century Central Residential",
-            image: "/images/mantri/central1.jpg",
+            name: "Bollineni Bion Block ",
+            image: "/images/mantri/bion4.jpg",
           },
           {
-            name: "Century Central Office",
-            image: "/images/mantri/central2.jpg",
-          },
-          {
-            name: "Century Central Office",
-            image: "/images/mantri/central2.jpg",
-          },
-        ],
-      },
-      {
-        title: "CENTURY ETHOS, HEBBAL – 1.5M SFT",
-        description:
-          "Premium residential apartments integrated with office spaces offering warm shell & plug-n-play facilities. Includes modern lifestyle amenities such as gym, cafeteria, and more.",
-        projects: [
-          {
-            name: "Century Ethos Residential",
-            image: "/images/mantri/ethos1.jpg",
-          },
-          {
-            name: "Century Ethos Offices",
-            image: "/images/mantri/ethos2.jpg",
+            name: "Bollineni Bion Block ",
+            image: "/images/mantri/biiion.jpg",
           },
         ],
       },
@@ -287,29 +223,108 @@ export const residentalsLink = [
         ],
       },
       {
-        title: "BOLLINENI BION, KONDAPUR, HYDERABAD – 2.8M SFT",
+        title: "CENTURY CENTRAL – 0.8M SFT",
         description:
-          "8.6-acre premium high-end residential development in Kondapur, Hyderabad with landscaped gardens, clubhouse, and premium lifestyle amenities.",
+          "Residential high-rise development offering premium apartments and office spaces with warm shell & plug-n-play facilities.",
         projects: [
           {
-            name: "Bollineni Bion Block ",
-            image: "/images/mantri/bion1.jpg",
+            name: "Century Central Residential",
+            image: "/images/mantri/central1.jpg",
           },
           {
-            name: "Bollineni Bion Block ",
-            image: "/images/mantri/bion2.jpg",
+            name: "Century Central Office",
+            image: "/images/mantri/central2.jpg",
           },
           {
-            name: "Bollineni Bion Block ",
-            image: "/images/mantri/bion3.jpg",
+            name: "Century Central Office",
+            image: "/images/mantri/central2.jpg",
+          },
+        ],
+      },
+      {
+        title: "CENTURY ETHOS, HEBBAL – 1.5M SFT",
+        description:
+          "Premium residential apartments integrated with office spaces offering warm shell & plug-n-play facilities. Includes modern lifestyle amenities such as gym, cafeteria, and more.",
+        projects: [
+          {
+            name: "Century Ethos Residential",
+            image: "/images/mantri/ethos1.jpg",
           },
           {
-            name: "Bollineni Bion Block ",
-            image: "/images/mantri/bion4.jpg",
+            name: "Century Ethos Offices",
+            image: "/images/mantri/ethos2.jpg",
+          },
+        ],
+      },
+      {
+        title: "CENTURY BREEZE, YELAHANKA – 0.7M SFT",
+        description:
+          "Premium residential apartments in Yelahanka offering spacious homes with modern lifestyle amenities.",
+        projects: [
+          {
+            name: "Century Breeze Tower 1",
+            image: "/images/mantri/breeze1.jpg",
           },
           {
-            name: "Bollineni Bion Block ",
-            image: "/images/mantri/biiion.jpg",
+            name: "Century Breeze Tower 2",
+            image: "/images/mantri/breeze2.jpg",
+          },
+        ],
+      },
+      {
+        title: "MANTRI SYNERGY – 1M SFT",
+        description:
+          "10-acre residential development on OMR Road, Padur, Chennai. Premium high-rise residences with clubhouse, swimming pool, gym, and other amenities.",
+        projects: [
+          {
+            name: "Mantri Synergy Clubhouse",
+            image: "/images/mantri/SYNERGY.jpg",
+          },
+          {
+            name: "Mantri Synergy Pool & Amenities",
+            image: "/images/mantri/SYNERGY2.jpg",
+          },
+        ],
+      },
+
+      {
+        title: "MANTRI TRANQUIL, KANAKAPURA ROAD – 1.9M SFT",
+        description:
+          "18-acre residential development with 85% landscaped gardens, clubhouse, and premium lifestyle amenities.",
+        projects: [
+          {
+            name: "Mantri Tranquil Towers",
+            image: "/images/mantri/tranq11.jpg",
+          },
+          {
+            name: "Mantri Tranquil Gardens",
+            image: "/images/mantri/tranq22.jpg",
+          },
+        ],
+      },
+
+      {
+        title: "MANTRI ESPANA, BELLANDUR – 1.5M SFT",
+        description:
+          "15-acre spacious lifestyle residential community on Outer Ring Road, designed with Spanish architecture. Features 3, 4 & 5-bedroom units, a 1.5 lakh sq.ft clubhouse, 5 swimming pools, gym, mini golf, and private pools for each unit.",
+        projects: [
+          { name: "Clubhouse & Pool", image: "/images/mantri/espana33.jpg" },
+          { name: "Mantri Espana Towers", image: "/images/mantri/espana2.jpg" },
+          { name: "Espana Interiors", image: "/images/mantri/espana3.webp" },
+        ],
+      },
+      {
+        title: "BRIGADE GARDENIA, KOTHANUR, JP NAGAR – 1.4M SFT",
+        description:
+          "14-acre residential development comprising 6 blocks with clubhouse and parking facilities.",
+        projects: [
+          {
+            name: "Brigade Gardenia ",
+            image: "/images/brigade/gardenia1.jpg",
+          },
+          {
+            name: "Brigade Gardenia ",
+            image: "/images/brigade/gardenia2.jpg",
           },
         ],
       },
@@ -369,14 +384,14 @@ export const commercialLink = [
           { name: "TechPark", image: "/images/brigade/techpark2.jpg" },
         ],
       },
-      // {
-      //   title: "BRIGADE SOUTH PARADE",
-      //   description: "COMMERCIAL / IT SPACE 0.4 M SFT, MG ROAD",
-      //   projects: [
-      //     { name: "South Parade", image: "/images/brigade/southparade.jpg" },
-      //     { name: "South Parade", image: "/images/brigade/southprade2.jpg" },
-      //   ],
-      // },
+      {
+        title: "BRIGADE SOUTH PARADE",
+        description: "COMMERCIAL / IT SPACE 0.4 M SFT, MG ROAD",
+        projects: [
+          { name: "South Parade", image: "/images/brigade/southparade.jpg" },
+          { name: "South Parade", image: "/images/brigade/southprade2.jpg" },
+        ],
+      },
     ],
   },
   {
@@ -451,21 +466,6 @@ export const commercialLink = [
     description:
       "Premium retail destinations offering world-class shopping, dining, entertainment, and leisure experiences across Bangalore and other key cities.",
     cases: [
-      {
-        title: "BRIGADE GARDENIA, KOTHANUR, JP NAGAR – 1.4M SFT",
-        description:
-          "14-acre residential development comprising 6 blocks with clubhouse and parking facilities.",
-        projects: [
-          {
-            name: "Brigade Gardenia ",
-            image: "/images/brigade/gardenia1.jpg",
-          },
-          {
-            name: "Brigade Gardenia ",
-            image: "/images/brigade/gardenia2.jpg",
-          },
-        ],
-      },
       {
         title: "MANTRI JUNCTION – CENTRAL MALL @ JP NAGAR – 0.3 M SFT",
         description:

@@ -20,7 +20,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Footer />
 
         <a
-          href="https://wa.me/1234567890" 
+          href="https://wa.me/+919740323934" 
           target="_blank"
           rel="noopener noreferrer"
           className="group fixed bottom-6 right-6 flex items-center justify-center p-4 rounded-full 
